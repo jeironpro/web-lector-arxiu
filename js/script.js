@@ -1,9 +1,9 @@
-const body = document.getElementById("body");
+const body = document.querySelector("body");
 const contenidor = document.getElementById("contenidor");
 const titolArxiu = document.getElementById("titol-arxiu");
 const arxiu = document.getElementById("arxiu");
 const contenidorArxiu = document.getElementById("contingut-arxiu");
-const botonReset = document.getElementById("boto-reset");
+const botoReset = document.getElementById("boto-reset");
 
 arxiu.addEventListener("change", function(event) {
     const arxiuLlegit = event.target.files[0];
@@ -23,7 +23,7 @@ arxiu.addEventListener("change", function(event) {
     }
 });
 
-botonReset.addEventListener("click", () => {
+botoReset.addEventListener("click", () => {
     contenidorArxiu.style.display = "none";
     contenidor.style.display = "flex";
     titolArxiu.textContent = "";
